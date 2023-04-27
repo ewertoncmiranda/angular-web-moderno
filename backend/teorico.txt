@@ -1,0 +1,77 @@
+O que é angular?
+
+ Framework JS do Google aplicações Web SPA baseado em componentes.
+
+Instalar CLI do angular
+ - npm i -g @angular/cli
+
+ Criar nova aplicação angular
+ - ng new nome-aplicacao
+ 
+-----------------------------------------------------------
+Fluxo de Inicialização Angular 
+
+ main.ts  -> AppModule -> AppComponent -> demais componentes 
+
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app/app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err)); 
+  --->esse trecho representa o bootstrap do Angular ,onde é iniciado o componente
+
+
+
+
+
+-----------------------------------------------------------------
+O que é componente?
+um trecho de código que representa um componente visual 
+html / css / TS
+
+É um conjunto de arquivo composto por
+nomedoarquivo.component.css
+nomedoarquivo.component.html
+nomedoarquivo.component.ts
+
+Dos 3 arquivos , o principal é o typescript pois a partir dele será buscado
+os demais html e css
+------------------------------------------------------------------------------
+
+MODULOS permitem alterar a visibilidade dos componentes , algo semelhante
+a visibilidade "protected" do Java , onde apenas quem esta dentro do pacote
+consegue enxergar . Para permitir que outros módulos possam "enxergar" e utilizar
+esses componenentes, é necessário EXPORTAR o componente , permitindo seu uso por outros
+pacotes.
+------------------------------------------------------------------------------------
+
+Anatomia do MODULO é composto por 5 itens
+
+Declarations - declarar os componentes que fazem parte do módulo
+  - components 
+  - diretivas 
+  - pipes
+
+Imports - onde importamos os módulos externos para usarmos no nosso módulonew
+Exports
+    - components    
+    - diretivas
+    - pipes
+
+Providers - declaração de services
+
+Bootstrap - define o componente que sera carregado no módulo
+
+----------------------------------------------------------------------------------
+Arquivos do angular
+
+- angular.json - arquivo de configuração do angular. Alterar a propriedade de inlineTemplate 
+  e inlineStyle para FALSE; Essas propriedades como TRUE dizem que os arquivos de componentes
+  (css,html e ts) ficaram em um arquivo unico. Notar que essa configuração veio assim em razão
+  da flag --minimal na hora da criação do projeto
+ 
+    "@schematics/angular:component": {
+        "inlineTemplate": false,
+        "inlineStyle": false,
+        "skipTests": true
+    }

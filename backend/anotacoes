@@ -1,0 +1,40 @@
+- Criar uma api local sem código
+
+1 - ter node / npm
+2 - npm init -y -- Cria arquivo package-json
+3 - npm i  json-server -- instala o json server
+4 - criar arquivo .json com estrutura semelhante a:
+          {
+              "products":[
+                  {
+                  "id":"1",
+                  "name":"Chockito",
+                  "price":"2.50"
+                  },
+                  {
+                  "id":"2",
+                  "name":"blusa",
+                  "price":"12.50"
+                  } 
+                ]
+          }
+
+5 - 
+          {
+            "name": "backend",
+            "version": "1.0.0",
+            "description": "",
+            "main": "index.js",
+            "scripts": {
+              "start": "json-server --watch db.json --port 3001"
+            },
+            "keywords": [],
+            "author": "",
+            "license": "ISC",
+            "dependencies": {
+              "json-server": "^0.16.1"
+            }
+          }
+configurar linha "scripts" para o json-server observer o arquivo db.json
+
+6 - dentro da pasta em que tudo foi configurado - npm start

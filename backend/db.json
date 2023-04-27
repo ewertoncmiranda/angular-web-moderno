@@ -1,0 +1,29 @@
+{
+    "products":[
+        {
+        "id":"1",
+        "name":"Chockito",
+        "price":"2.50"
+        },
+        {
+        "id":"2",
+        "name":"blusa",
+        "price":"12.50"
+        },
+        {
+        "id":"3",
+        "name":"Doritos",
+        "price":"10.00"
+        },
+        {
+        "id":"4",
+        "name":"Coca-Cola",
+        "price":"15.00"
+        },
+        {
+        "id":"5",
+        "name":"Pastel",
+        "price":"8.50"
+        }
+]
+}
