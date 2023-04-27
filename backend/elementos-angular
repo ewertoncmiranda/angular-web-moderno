@@ -3,8 +3,11 @@ Diretivas de Atributos
 Diretivas de Estrutural
 
 Diretivas de Atributos
+-> ng g d directives/nomeDiretiva
+-> ng generate directive directives/nomeDiretiva
+
  - altera aparencia e o comportamento de um elemento , componente ou diretiva
- 
+
  @Directive({
   selector:'[appRed]'
  })

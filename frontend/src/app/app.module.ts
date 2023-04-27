@@ -14,6 +14,7 @@ import {MatCardModule} from '@angular/material/card';
 import { LoremIpsumTextComponent } from './components/template/lorem-ipsum-text/lorem-ipsum-text.component';
 import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
+import { RedDirective } from './directives/red.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ProductCrudComponent } from './views/product-crud/product-crud.componen
     NavComponent,
     LoremIpsumTextComponent,
     HomeComponent,
-    ProductCrudComponent
+    ProductCrudComponent,
+    RedDirective
   ],
   imports: [
     BrowserModule,

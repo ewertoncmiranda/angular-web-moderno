@@ -21,9 +21,6 @@ platformBrowserDynamic().bootstrapModule(AppModule)
   --->esse trecho representa o bootstrap do Angular ,onde é iniciado o componente
 
 
-
-
-
 -----------------------------------------------------------------
 O que é componente?
 um trecho de código que representa um componente visual 
@@ -100,3 +97,4 @@ import { Component } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 }
+------------------------------------------------------------------------------------------------------
