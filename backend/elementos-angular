@@ -1,0 +1,101 @@
+-------------------------------------------------------------------------------------------------------
+Diretivas de Atributos
+Diretivas de Estrutural
+
+Diretivas de Atributos
+ - altera aparencia e o comportamento de um elemento , componente ou diretiva
+ 
+ @Directive({
+  selector:'[appRed]'
+ })
+
+Diretivas de Estrutural
+ - Altera o layout adicionando e removendo elementos da DOM / Estrutura do HTML
+
+ <form *ngIf="product"
+        class="product-form">
+</form>
+
+-------------------------------------------------------------------------------------------------------
+Property Binding
+
+Permite fazer a ligação dos dados que estão no typescript com o html
+através da propriedade [datasource]="nomeDaVariavel"
+
+*******************************************************************
+export class ProductFactory implements OnInit{
+  products : Product[] ;
+}
+*******************************************************************
+<table>
+  [datasource]="products"
+<\table>
+*******************************************************************
+ por exemplo, ao receber uma lista de um backend via TS, o html pode tratar essa lista em seus elementos
+
+------------------------------------------------------------------------------------------------------------------
+Event Binding 
+
+Permite que um evento do HTML ative uma funcao/metodo dentro do TS.
+
+*************************************************************
+<a (click)="callFunction" >
+
+</a>
+*************************************************************
+export class ProductFactory implements OnInit{
+  callFunction():void{
+    //
+  }
+}
+*************************************************************
+----------------------------------------------------------------------------------------------------------------
+One Way Data Binding
+
+permite a que alteração feita na variavel dentro do TS reflita para a referencia dessa variavel
+dentro do HTML
+
+******************************************************************
+
+<input [value]="nome"> </input>
+
+******************************************************************
+
+nome: string ;
+
+******************************************************************
+assim que é realizada alguma alteração na variavel dentro do TS devido alguma logica
+o resultado é refletido na referencia do HTML.
+
+-----------------------------------------------------------------------------------------------------------
+Two-Way Data Binding
+
+permite que o reflexo das alterações seja bidirecional, ou seja se alterar no html
+altera no TS e se ALterar no TS reflete no HTML.
+
+******************************************************************
+<input [(ngModel)]="nome"> </input>
+******************************************************************
+
+nome: string ;
+
+******************************************************************
+assim que é realizada alguma alteração na variavel dentro do TS devido alguma logica
+o resultado é refletido na referencia do HTML.
+
+-------------------------------------------------------------------------------------------------------------------
+Rotas no Angular - Angular Router
+
+realizar o mapeamento entre URL e  um componente , utilizando o RouterOutlet que é um componente da
+biblioteca Router do Angular.
+
+----------------------------------------------------------------------------------------------------------------
+PIPES 
+
+assemelhasse a Streams em Java , fazendo uma série de alterações encadeadas
+em uma lista 
+
+<a>
+ o vencimento é 
+ {{ produto.vencimento | date }}
+<\a>
