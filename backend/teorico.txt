@@ -86,3 +86,17 @@ ng g c components/caminho/nomecomponente
 -----------------------------------------------------------------------------------------
 CSS GLOBAL - arquivo style.css
 Esse arquivo contém o css que será capturado por toda aplicação
+
+--------------------------------------------------------------------------------------------------
+ESTRUTURA - Classe x Componente
+Uma classe typescript vem a se tornar um componente quando são usados DECORATORS "@DaVida"
+
+
+import { Component } from '@angular/core';
+@Component({
+  selector: 'app-nav',
+  templateUrl: './nav.component.html',
+  styleUrls: ['./nav.component.css']
+})
+export class NavComponent implements OnInit {
+}
