@@ -75,3 +75,7 @@ Arquivos do angular
         "inlineStyle": false,
         "skipTests": true
     }
+----------------------------------------------------------------------------------
+ANGULAR MATERIAL
+
+ng add @angular/material
