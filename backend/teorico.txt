@@ -76,6 +76,13 @@ Arquivos do angular
         "skipTests": true
     }
 ----------------------------------------------------------------------------------
-ANGULAR MATERIAL
-
+-ANGULAR MATERIAL - Adicionar ao projeto
 ng add @angular/material
+
+-Criar um novo Componente via CLI
+ng generate componente  components/caminho/nomecomponente
+ng g c components/caminho/nomecomponente
+
+-----------------------------------------------------------------------------------------
+CSS GLOBAL - arquivo style.css
+Esse arquivo contém o css que será capturado por toda aplicação
